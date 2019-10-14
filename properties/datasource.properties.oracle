@@ -1,0 +1,9 @@
+dsname=sigitmweboci231
+dsdbname=default;create=true
+dsjndiname=jdbc/oracle/sigitmweboci
+dsdriver=oracle.jdbc.OracleDriver
+dsurl=jdbc:oracle:thin:@//10.129.174.44:1521/SIGITMH
+dsusername=sigitm_1_2
+dspassword=teatroamazonas 
+dstestquery=SQL ISVALID
+dsmaxcapacity=15

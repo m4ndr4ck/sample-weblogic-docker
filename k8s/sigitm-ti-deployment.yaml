@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sigres-dm-deployment
+  namespace: dev
+  labels:
+    app: sigres-dm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sigres-dm
+  template:
+    metadata:
+      labels:
+        app: sigres-dm
+    spec:
+      containers:
+      - name: sigres-dm
+        image: 10.129.178.173:5004/sigres-dm-dev:latest
+        ports:
+        - containerPort: 7001
+        - containerPort: 7010
+        - containerPort: 7020
+      imagePullSecrets:
+      - name: regcred
